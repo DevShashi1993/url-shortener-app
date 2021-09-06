@@ -1,0 +1,20 @@
+.navbar {
+    background-color: blanchedalmond;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-header {
+    margin-left: 2em;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.nav-items {
+    width: 20em;
+    display: flex;
+    justify-content: space-around;
+}
+

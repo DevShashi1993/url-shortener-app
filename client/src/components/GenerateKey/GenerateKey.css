@@ -1,0 +1,21 @@
+.apikey-container{
+    width: 100%;
+}
+
+.apikey-input-area {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+
+.instruction-section {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.instruction-section p {
+    text-align: left;
+    padding-left: 6em;
+}
