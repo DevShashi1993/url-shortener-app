@@ -30,20 +30,22 @@ const Main = (props) => {
   }, [history, props.isLoggedin]);
 
   return (
-    <div className="main">
+    <div className="main-container">
       <div className="input-section">
         <input
           type="url"
-          placeholder="enter url"
+          placeholder="Enter url"
           value={urlData}
           onChange={(e) => handleUrlData(e)}
         />
         <button onClick={submitHandler}>Create Short URL</button>
       </div>
 
-      { shortURL && <div className="generated-url">
-        <a href={shortURL}>{shortURL}</a>
-      </div>}
+      {shortURL && (
+        <div className="generated-url">
+          <a href={shortURL}>{shortURL}</a>
+        </div>
+      )}
     </div>
   );
 };

@@ -15,7 +15,7 @@ export default function GenerateKey(props) {
       if (res.data.api_key) {
         setGeneratedApiKey(res.data.api_key);
         const updatedUserData = { ...userData, apiKey: res.data.api_key };
-        setUserData(updatedUserData); 
+        setUserData(updatedUserData);
         localStorage.setItem("usappuser", JSON.stringify(updatedUserData));
       }
     }
@@ -34,14 +34,13 @@ export default function GenerateKey(props) {
         <button onClick={submitHandler}>Generate Api Key</button>
       </div>
       <div className="instruction-section">
-      <h3>Please use the API with above generated API key as shown below : </h3>
-      <p>{`--request: POST Method`}</p>
-      <p>{`--api url: http://localhost:5000/api/shorturl`}</p>
-      <p>{`--data: {url: 'url_to_be_shortend', key: '${generatedApiKey}'}`}</p>
-      
+        <h3>
+          Please use the API with above generated API key as shown below :{" "}
+        </h3>
+        <p>{`--request: POST Method`}</p>
+        <p>{`--api url: http://localhost:5000/api/shorturl`}</p>
+        <p>{`--data: {url: 'url_to_be_shortend', key: '${generatedApiKey}'}`}</p>
       </div>
-      
-
     </div>
   );
 }

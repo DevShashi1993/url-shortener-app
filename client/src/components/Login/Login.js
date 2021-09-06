@@ -25,7 +25,7 @@ export default function Login(props) {
     };
 
     const res = await axios.get("/auth/login", {
-      params: userData
+      params: userData,
     });
 
     if (res.status === 200) {
@@ -50,7 +50,7 @@ export default function Login(props) {
       }
 
       setJWTToken(jwtToken);
-      window.location.href = '/';
+      window.location.href = "/";
     }
   };
 
@@ -79,7 +79,7 @@ export default function Login(props) {
       }
 
       setJWTToken(jwtToken);
-      window.location.href = '/';
+      window.location.href = "/";
     };
     xhr.send("idtoken=" + id_token);
   };
@@ -90,11 +90,23 @@ export default function Login(props) {
 
   return (
     <>
-      <form className="login-form" onSubmit={handleOnSubmit}>
-        <input type="text" placeholder="Email" name="email" />
+      <form className="login-form-container" onSubmit={handleOnSubmit}>
+        <label htmlFor="email">
+          <b>Email</b>
+        </label>
+        <input type="text" placeholder="Email" name="email" required />
 
-        <input type="password" placeholder="Password" name="password" />
+        <label htmlFor="password">
+          <b>Password</b>
+        </label>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        />
 
+        <button type="submit">Login</button>
         <GoogleLogin
           clientId="33139913563-3hgrkp0reqpegvc4svs6ussov05rr1g6.apps.googleusercontent.com"
           buttonText="Login"
@@ -102,8 +114,6 @@ export default function Login(props) {
           onFailure={onLoginFailure}
           cookiePolicy={"single_host_origin"}
         />
-
-        <button type="submit">Login</button>
       </form>
       <Link to="/signup">Click to Signup</Link>
     </>

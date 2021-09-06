@@ -1,17 +1,33 @@
-.apikey-container{
-    width: 100%;
+.apikey-container {
+    width: 50%;
 }
 
 .apikey-input-area {
     display: flex;
     justify-content: center;
-    margin: 1em;
 }
 
+.apikey-input-area input {
+    width: 70%;
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.apikey-container button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
 
 .instruction-section {
-    width: 50%;
-    margin: 0 auto;
+    margin: 2em auto;
     text-align: center;
 }
 
@@ -19,3 +35,4 @@
     text-align: left;
     padding-left: 6em;
 }
+
